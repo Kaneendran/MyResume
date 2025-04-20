@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaneendran Kirubakaran - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #3b82f6;
+      --bg: #f9fafb;
+      --text: #1f2937;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+    nav button {
+      background-color: var(--accent);
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 5px;
+      font-weight: 500;
+      cursor: pointer;
+      color: white;
+      transition: background 0.3s;
+    }
+    nav button:hover {
+      background-color: #2563eb;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+    .edu, .job {
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      list-style: disc;
+      margin-left: 2rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .contact {
+      text-align: center;
+    }
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .chart-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    .chart-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .job p, .edu p {
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kaneendran Kirubakaran</h1>
+    <p>Kerawelapitiya, Hendala, Wattala, Sri Lanka | 0765775141 | <a href="mailto:kaneendrank.official@gmail.com">kaneendrank.official@gmail.com</a></p>
+    <nav>
+      <a href="#objective"><button>About</button></a>
+      <a href="#projects"><button>Projects</button></a>
+      <a href="#contact"><button>Contact</button></a>
+    </nav>
+  </header>
+
+  <section id="objective">
+    <h2>About Me</h2>
+    <p>Analytical and detail-oriented data analyst with a strong background in statistical analysis and data visualization. Seeking a position in a data-driven organization where I can apply my expertise in SQL, Python, and Tableau to transform data into actionable insights.</p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="edu">
+      <p><strong>St. Benedict's College</strong> – High School (GCE A/L)</p>
+      <p><strong>IDM Nations Campus</strong> – Web Designing and Development (Credit)</p>
+      <p><strong>NIBM University</strong> – Diploma in Software Engineering (88%)</p>
+      <p><strong>Microsoft Learn</strong> – Data Engineering on Azure & AI Tools (100%)</p>
+      <p><strong>BIET University</strong> – HND in Data Technologist (Pursuing)</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="job">
+      <p><strong>HCL Technologies (Pvt) Ltd</strong> – Analyst (2024–Present)</p>
+      <ul>
+        <li>Awarded Best Performer 2024</li>
+        <li>Handled 1B+ healthcare providers with 99% accuracy</li>
+      </ul>
+    </div>
+    <div class="job">
+      <p><strong>Mercantile Investments and Finance PLC</strong> – Operations Coordinator (2022–2024)</p>
+      <ul>
+        <li>Data migration project success</li>
+        <li>Test case development for E-Financial project</li>
+      </ul>
+    </div>
+    <div class="job">
+      <p><strong>Hatton National Bank</strong> – Operations Associate (2022)</p>
+      <ul>
+        <li>Account openings, loan processing, cheque clearing</li>
+        <li>Worked on Infosys Finacle System</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills Overview</h2>
+    <div class="chart-wrapper">
+      <div class="chart-container">
+        <canvas id="skillsPie"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="experienceBar"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>SQL, Python, Tableau</li>
+      <li>Creative Thinking & Designing</li>
+      <li>Team Management & Leadership</li>
+      <li>Data Analysis & Interpretation</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p><strong>Voice Recognized Personalized Data Management Site – "MyBuddy"</strong></p>
+    <p>Currently in development – use voice to manage personal data globally.</p>
+    <p><a href="https://kaneendranworld-github-io.vercel.app/" target="_blank">Try the Prototype</a></p><br/>
+    <p><strong>MyBuddy CRM Solution for Grow Businesses.</strong></p>
+    <p>MyBuddy is all about a Virtual Business Assistant which can grow businesses to wide simply this project which owned & made by myself. <br/> It could help business to grow.</p>
+    <p><a href="https://mybuddyoffl.github.io/mybuddy.net/" target="_blank">Try the Prototype</a></p>
+
+
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>Reach me at: <a href="mailto:kaneendrank.official@gmail.com">kaneendrank.official@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p id="date"></p>
+    <p>&copy; <span id="year"></span> Kaneendran Kirubakaran. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const today = new Date();
+    document.getElementById('date').textContent = `Last updated: ${today.toDateString()}`;
+    document.getElementById('year').textContent = today.getFullYear();
+
+    const pieCtx = document.getElementById('skillsPie').getContext('2d');
+    new Chart(pieCtx, {
+      type: 'pie',
+      data: {
+        labels: ['SQL', 'Python', 'Tableau', 'Design', 'Leadership'],
+        datasets: [{
+          label: 'Skill Proficiency',
+          data: [25, 25, 20, 15, 15],
+          backgroundColor: ['#3b82f6', '#10b981', '#f59e0b', '#6366f1', '#ef4444'],
+        }]
+      }
+    });
+
+    const barCtx = document.getElementById('experienceBar').getContext('2d');
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: ['HCL', 'Mercantile', 'HNB'],
+        datasets: [{
+          label: 'Experience (months)',
+          data: [16, 24, 12],
+          backgroundColor: '#3b82f6'
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
